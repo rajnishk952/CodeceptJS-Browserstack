@@ -1,0 +1,29 @@
+{
+  "name": "CodeceptJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run single && npm run local && npm run parallel",
+    "single": "npx codeceptjs run -c single/codecept.conf.js --steps",
+    "parallel": "npx codeceptjs run-multiple bs -c parallel/codecept.conf.js --steps",
+    "local": "npx codeceptjs run -c local/codecept.conf.js --steps"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wdio/browserstack-service": "^5.22.1",
+    "browserstack-local": "^1.4.5",
+    "codeceptjs": "^2.6.6",
+    "webdriver": "^6.1.17",
+    "@wdio/local-runner": "^5.22.4"
+  },
+  "dependencies": {
+    "@wdio/cli": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "http-server": "^0.12.3",
+    "wdio": "^4.0.0",
+    "webdriverio": "^5.22.4"
+  }
+}
